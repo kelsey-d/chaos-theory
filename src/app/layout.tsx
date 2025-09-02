@@ -27,24 +27,27 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${epilogue.variable} ${pressStart2P.variable} antialiased`}>
-      <header className="flex items-center justify-between p-8 text-white">
+      <body>
+        <header>
+        <div className="absolute top-0 w-full p-4 md:p-8 flex flex-col md:flex-row items-center justify-between text-white">
         <Image src="/echo-logo.png" alt="Echo Logo" width={114} height={41}/>
         <nav aria-label="main navigation" className="flex font-bold gap-4">
           <Link href="/">home</Link>
           <Link href="/echo-lounge">echo lounge</Link>
           <Link href="/subscribe">subscribe</Link>
         </nav>
-        <div className="absolute uppercase bottom-0 flex md:flex-col text-sm pb-8 gap-2 font-light">
+        </div>
+        <div className="absolute uppercase bottom-0 w-full md:w-fit p-4 md:p-8 flex md:flex-col justify-center md:justify-start text-sm gap-2 font-light tracking-wider">
           <Link href="/#music">MUSIC</Link>
+          <span className="inline md:hidden">|</span>
           <Link href="/#tour">TOUR</Link>
+          <span className="inline md:hidden">|</span>
           <Link href="/#merch">MERCH</Link>
+          <span className="inline md:hidden">|</span>
           <Link href="/#kiriban">KIRIBAN</Link>
         </div>
 
       </header>
-      <body
-        
-      >
         {children}
       </body>
     </html>

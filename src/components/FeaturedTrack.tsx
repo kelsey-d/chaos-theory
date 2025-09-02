@@ -1,14 +1,15 @@
 import Image from 'next/image';
+import InnerShadow from './InnerShadow';
+import Button from './Button';
 
 export default function FeaturedTrack() {
   return (
-    <div className="w-[100vw] h-[100vh] flex flex-col items-center justify-center bg-gray-900 text-white p-4">
-      <Image src="/path/to/your/image.jpg" alt="Featured Track" width={300} height={300} className="mb-4 rounded-lg shadow-lg" />
-      <div className="absolute flex flex-col justify-end items-center">
-        <Image src="/path/to/your/icon.png" alt="Icon" width={20} height={20} className="inline-block mr-2" />
-        <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
-          JOIN THE CHAOS
-        </button>
+    <div className="w-[100vw] h-[100vh] flex flex-col items-center justify-end text-white p-4 pb-0">
+      <Image src="/featured-track-bg.webp" alt="Featured Track" width={1920} height={1080} className="absolute w-full h-full object-cover -z-2" />
+      <InnerShadow />
+      <div className="flex flex-col justify-center items-center gap-8 pb-16 md:pb-8">
+        <Image src="/angels cover.png" alt="Icon" width={125} height={125} className="inline-block mx-auto" />
+        <Button text="JOIN THE CHAOSE" />
       </div>
     </div>
   );
